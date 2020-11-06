@@ -1,0 +1,25 @@
+service: demo
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  stage: dev
+  region: ap-south-1
+  profile: personal
+
+functions:
+  register:
+    handler: handler.register
+    events:
+      - http:
+          path: user
+          method: post
+  getUserList:
+    handler: handler.getUserList
+    events: 
+      - http:
+          path: user
+          method: get
+
+plugins:
+  - serverless-offline
