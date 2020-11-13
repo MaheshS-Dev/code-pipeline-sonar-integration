@@ -21,4 +21,5 @@ phases:
 artifacts:
   files:
     - target/dev/*
+    - buildspec/deploy/buildspec.deploy.dev.yml
     - serverless.yml
