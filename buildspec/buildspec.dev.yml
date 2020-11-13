@@ -1,0 +1,24 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-version:
+      nodejs: 12
+    commands: 
+      - echo Installing dependencies
+      - echo Installing serverless
+      - npm install serverless -g
+      - echo Installing node modules
+      - npm install
+
+  build:
+    commands:
+      - echo Building project
+      - mkdir -p target/dev
+      - serverless package --package target/dev --stage dev -v -r ap-south-1
+      - echo Finished building project
+
+artifacts:
+  files:
+    - target/dev/*
+    - serverless.yml
