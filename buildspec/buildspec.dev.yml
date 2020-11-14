@@ -10,6 +10,7 @@ phases:
       - npm install serverless -g
       - echo Installing node modules
       - npm install
+      - cd node_modules && ls
 
   build:
     commands:
