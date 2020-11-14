@@ -13,5 +13,5 @@ phases:
       - echo Deploying serverless application
       - pwd
       - ls
-      - serverless deploy --stage dev --package /$CODEBUILD_SRC_DIR/target/dev -v -r ap-south-1
+      - serverless deploy --stage dev --package ./target/dev -v -r ap-south-1
       - echo Deployed successfully

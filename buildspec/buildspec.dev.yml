@@ -5,12 +5,12 @@ phases:
     runtime-versions:
       nodejs: 12
     commands: 
-      - echo Installing dependencies
+      - echo Installing global dependencies
       - echo Installing serverless
       - npm install serverless -g
       - echo Installing node modules
       - npm install
-      - cd node_modules && ls
+      - echo Instaling dependencies completed
 
   build:
     commands:
